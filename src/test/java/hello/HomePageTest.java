@@ -54,4 +54,22 @@ public class HomePageTest {
                 .andExpect(xpath("//title").string("CS56 Spring Boot Practice App"));
                 //.andExpect(xpath("//title").string("Getting Started: Serving Web Content"));
     }
+
+
+    @Test
+    public void getHomePage_hasCorrectBrand() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
+                .andExpect(status().isOk())
+                .andExpect(xpath("/html/body/div/nav/a").exists())
+                .andExpect(xpath("/html/body/div/nav/a").string("lab07"));
+    }
+
+
+    @Test
+    public void getPage1_hasCorrectTitle() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
+                .andExpect(status().isOk())
+                .andExpect(xpath("//*[@id=\"navbarTogglerDemo03\"]/ul[1]/li[2]/a").exists())
+                .andExpect(xpath("//*[@id=\"navbarTogglerDemo03\"]/ul[1]/li[2]/a").string("Earthquakes"));
+    }
 }
