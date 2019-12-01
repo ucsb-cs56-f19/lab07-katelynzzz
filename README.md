@@ -1,6 +1,7 @@
 URLS:
-* <https://ucsb-cs56-f19.github.io/lab07-katelynzzz/>
-* <https://cs56-f19-lab07-katelynzzz.herokuapp.com/>
+* <https://ucsb-cs56-f19.github.io/lab07-katelynzzz>
+* <https://cs56-f19-lab07-katelynzzz.herokuapp.com>
+* <https://travis-ci.org/ucsb-cs56-f19/lab07-katelynzzz>
 
 
 A simple Spring Boot webapp using:
